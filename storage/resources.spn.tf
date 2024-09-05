@@ -5,7 +5,6 @@ resource "time_rotating" "time_rotation" {
 resource "azuread_application" "az_copy_app" {
   display_name = var.application_display_name
   owners = [data.azuread_client_config.current_client.object_id]
-  
 }
 
 resource "azuread_application_password" "azcopy_app_password" {
