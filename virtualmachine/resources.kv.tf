@@ -17,13 +17,15 @@ resource "azurerm_key_vault_access_policy" "service_principal" {
     "Create",
     "Delete",
     "Get",
-    "Update"
+    "Update",
+    "List"
   ]
 
   secret_permissions = [
     "Get",
     "Delete",
-    "Set"
+    "Set",
+    "List"
   ]
 }
 

@@ -8,7 +8,7 @@ resource "azurerm_network_interface" "win_vm_nic" {
         name = var.subnet_name
         subnet_id = azurerm_subnet.vm_subnet.id
         private_ip_address_allocation = "Dynamic"
-        public_ip_address_id = azurerm_public_ip.win_vm_pip.ip_address
+        public_ip_address_id = azurerm_public_ip.win_vm_pip.id
     }
 
     depends_on = [
