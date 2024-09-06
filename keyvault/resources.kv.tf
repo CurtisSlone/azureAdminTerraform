@@ -23,7 +23,9 @@ resource "azurerm_key_vault_access_policy" "service_principal" {
     "List",
     "Rotate",
     "Purge",
-    "Update"
+    "Update",
+    "GetRotationPolicy",
+    "SetRotationPolicy"
   ]
 
   secret_permissions = [
@@ -31,7 +33,7 @@ resource "azurerm_key_vault_access_policy" "service_principal" {
     "Delete",
     "Set",
     "List",
-    "Purge"
+    "Purge",
   ]
 }
 

@@ -87,7 +87,7 @@ resource "azurerm_virtual_machine_extension" "vm_extension" {
         "EncryptionOperation": "EnableEncryption",
         "KeyEncryptionAlgorithm": "RSA-OAEP",
         "KeyVaultURL": "${azurerm_key_vault.vm_kv.vault_uri}",
-        "KeyVaultResourceId": "${azurerm_key_vault.vm_kv.id}",
+        "KeyVaultResourceId": "${azurerm_key_vault.vm_kv.resource_id}",
         "KeyEncryptionKeyURL": "${azurerm_key_vault.vm_kv.vault_uri}",
         "KekVaultResourceId": "${azurerm_key_vault.vm_kv.id}",
         "VolumeType": "All"
